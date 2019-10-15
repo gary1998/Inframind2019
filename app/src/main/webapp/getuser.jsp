@@ -7,14 +7,13 @@
         Class.forName("com.mysql.cj.jdbc.Driver");
         Connection con = DriverManager.getConnection("jdbc:mysql://inframind-db:3306/inframind_users","root", "123");
         Statement stmt = con.createStatement();
-        String query = "select count(username) from users where username='"+username+"' and password='"+password+"'";
+        String query = "select username from users where username='"+username+"' and password='"+password+"'";
         ResultSet rs = stmt.executeQuery(query);
         if (rs.next()) {
-            session.setAttribute("user",username);
             response.sendRedirect("welcome.jsp");
         }
         else {
-            response.sendRedirect("login.jsp");
+            out.println("<b>Invalid Credentials</b>")
         }
     }
     catch(Exception e){
