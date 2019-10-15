@@ -18,15 +18,14 @@
         "name": "tcp-8080-8080-hftvx",
         "protocol": "TCP",
         "port": 8080,
-        "targetPort": 8080,
-        "nodePort": 31815
+        "targetPort": 8080
       }
     ],
     "selector": {
       "k8s-app": "inframind-app"
     },
     "clusterIP": "172.21.236.213",
-    "type": "NodePort",
+    "type": "ClusterIP",
     "sessionAffinity": "None",
     "externalTrafficPolicy": "Cluster"
   },
