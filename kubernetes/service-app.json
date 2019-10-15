@@ -1,0 +1,36 @@
+{
+  "kind": "Service",
+  "apiVersion": "v1",
+  "metadata": {
+    "name": "inframind-app",
+    "namespace": "default",
+    "selfLink": "/api/v1/namespaces/default/services/inframind-app",
+    "uid": "07def703-eea6-11e9-8233-bebdab5c854c",
+    "resourceVersion": "2306",
+    "creationTimestamp": "2019-10-14T17:14:07Z",
+    "labels": {
+      "k8s-app": "inframind-app"
+    }
+  },
+  "spec": {
+    "ports": [
+      {
+        "name": "tcp-8080-8080-hftvx",
+        "protocol": "TCP",
+        "port": 8080,
+        "targetPort": 8080,
+        "nodePort": 31815
+      }
+    ],
+    "selector": {
+      "k8s-app": "inframind-app"
+    },
+    "clusterIP": "172.21.236.213",
+    "type": "NodePort",
+    "sessionAffinity": "None",
+    "externalTrafficPolicy": "Cluster"
+  },
+  "status": {
+    "loadBalancer": {}
+  }
+}

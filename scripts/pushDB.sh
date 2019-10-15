@@ -1,0 +1,1 @@
+docker push gary29198/inframind-db:latest

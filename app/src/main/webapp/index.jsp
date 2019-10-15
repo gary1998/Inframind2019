@@ -23,7 +23,7 @@
             <li class="list-group-item active">Registered Users</li>
                 <%
                     Class.forName("com.mysql.cj.jdbc.Driver");
-                    Connection con = DriverManager.getConnection("jdbc:mysql://172.17.0.2:3306/inframind_users","root", "123");
+                    Connection con = DriverManager.getConnection("jdbc:mysql://inframind-db:3306/inframind_users","root", "123");
                     String query = "select * from users;";
                     Statement stmt = con.createStatement();
                     ResultSet rs = stmt.executeQuery(query);

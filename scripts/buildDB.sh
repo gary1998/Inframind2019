@@ -1,0 +1,1 @@
+docker build -t gary29198/inframind-db:latest ./db

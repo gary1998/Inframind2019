@@ -1,0 +1,1 @@
+docker build -t gary29198/inframind-app:latest ./app
