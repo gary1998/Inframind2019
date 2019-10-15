@@ -1,9 +1,5 @@
 # TCS_Inframind_2019
 
-> To start the Maven Application locally, run following command:
-
-`mvn tomcat7:run`
-
 > To build MySQL Docker container, run:
 
 `docker build -t gary29198/inframind-db:latest ./db`
