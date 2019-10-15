@@ -13,7 +13,7 @@
             response.sendRedirect("welcome.jsp");
         }
         else {
-            out.println("<b>Invalid Credentials</b>")
+            out.println("<b>Invalid Credentials</b>");
         }
     }
     catch(Exception e){
